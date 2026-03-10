@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfaiataria | Algodão Egípcio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="src/styles/main.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Montserrat:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0A1128;
+        }
+
+        /* Midnight Navy */
+        h1,
+        h2,
+        .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .text-off-white {
+            color: #E2E8F0;
+        }
+
+        /* Branco suave (Slate-200) */
+        .border-gold-soft {
+            border-color: #94A3B8;
+        }
+
+        /* Cor de aço para detalhes */
+    </style>
+</head>
+
+<body class="bg-[#F8FAFC]">
+
+    <div id="nav"></div>
+    <div id="hero"></div>
+    <div id="features"></div>
+    <div id="process"></div>
+    <div id="cta"></div>
+
+    <script>
+        function load(id, file) {
+            fetch(`src/components/${file}`)
+                .then(response => response.text())
+                .then(data => { document.getElementById(id).innerHTML = data; });
+        }
+
+        load('hero', 'hero.html');
+        load('features', 'features.html');
+        load('process', 'process.html')
+        load('cta', 'cta.html');
+    </script>
+</body>
+
+</html>
